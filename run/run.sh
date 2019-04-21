@@ -4,7 +4,7 @@ MAIN_ROOT=/disk2/wangyulong/SpeechSegmentation  # 需定制
 
 ############# mkdir path if not exist ########
 if [ ! -d ${MAIN_ROOT}/cache ]; then mkdir -p ${MAIN_ROOT}/cache; fi # 需定制
-if [ ! -d ${MAIN_ROOT}/logs ]; then mkdir -p ${MAIN_ROOT}/cache; fi # 需定制
+if [ ! -d ${MAIN_ROOT}/logs ]; then mkdir -p ${MAIN_ROOT}/logs; fi # 需定制
 
 ############# update path ##############
 export PATH=$PATH:${MAIN_ROOT}/src/utils
