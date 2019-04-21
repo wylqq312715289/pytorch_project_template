@@ -1,0 +1,14 @@
+.DS_Store
+*.pyc
+log
+.idea
+tmp
+bak
+
+na_hosts
+*.csv
+*.idea
+
+
+external/*
+src/debug/*

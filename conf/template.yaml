@@ -1,0 +1,46 @@
+############### Global Config ##############
+random_seed: 20190421
+
+
+###############  Path Config ###############
+save_dir: "/disk2/wangyulong/SpeechSegmentation/cache/model_dict"
+#continue_from_file: "/disk2/wangyulong/SpeechEvaluation/cache/model_dict"
+model_file_name: "final.pth.tar"   # best model file name
+
+
+
+###############  Model Config  ###############
+class_num: 2
+input_size: 13         # 特征维度
+hidden_size: 256       # 隐层维度
+num_layers: 3          # 几个lstm层
+dropout: 0.2
+bidirectional: false       # 是否使用双向LSTM
+optimizer: adam        # 优化器类型
+lr: 0.01               # 学习率
+
+
+
+
+############### Train Config ###############
+epochs: 200
+batch_size: 16
+#half_lr: 0.5
+early_stop: 100000
+num_workers: 13        # dataloader的数量
+opt_l2_penalty: 0.0001
+sgd_momentum: 0
+momentum: 0.9
+checkpoint: false       # bool类型: 是否每个epoch都缓存模型
+use_gpu: true
+gpu_id: 3
+
+
+
+
+
+############### Logging Config ###############
+logging_dir: "/disk2/wangyulong/SpeechSegmentation/logs"
+print_freq: 10  # 每隔10个batch 打印一次
+visdom: false
+visdom_id: "SpeechSeg"
